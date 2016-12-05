@@ -135,10 +135,25 @@ In the "max-of-three" method I compared all three items instead of comparing onl
 ## 4. Question time! (~20 mins) [6p]
 
 ### Where the abstract class is useful? [2p]
-#### Your answer:
+#### Your answer: It is useful where we want to give a certain frame to more children classes, like
+#### they must have certain fields declared or compulsory methods defined.
+#### These fields or methods can be abstract themselves or can be defined in the abstract class itself,
+#### which makes it easier to maintain them and have control how the children look like.
 
 ### Describe a method! Show the necessary parts and how are them called! [2p]
-#### Your answer:
+#### Your answer: a method is a behaviour inside a class running something with or without given attribute.
+It looks e.g. public void method (int i) { behaviour using i }. A void method doesn't return a value of a certain type.
+It can return a value (like public int method (int i){}.
+Where they can be called, depends on their access modifier. Private can only be called within the class where they exist.
+Public can be called everywhere if the parent class is imported.
+Protected can be called within the package they are in and all the subclasses of it.
+If a method doesn't have a modifier, it can be called within the package they are in
+E.g. int result = method(2);
 
 ### What is the constructor? When it is used? [2p]
-#### Your answer:
+#### Your answer: A constructor is used when an object is created from a class.
+It instantiates the fields the class has. The object will be than an entity of that class, like
+our little grey Opel Corsa could be an object of the blueprint "Opel" class.
+Every class has a constructor per default, a specified constructor overwrites it.
+There can be more constructors with different attributes.
+Creating an object also calls the parent's constructor.
