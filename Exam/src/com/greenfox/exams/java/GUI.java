@@ -23,6 +23,7 @@ public class GUI extends JFrame {
         this.add(BlackJack);
         BlackJack.add(userLabel);
         BlackJack.add(houseLabel);
+        Cardlists myCardLists = new Cardlists();
   }
 
     public void setBlackJack() {
@@ -32,11 +33,11 @@ public class GUI extends JFrame {
         userLabel.add(resetButton);
         drawButton.setPreferredSize(new Dimension(80, 50));
         resetButton.setPreferredSize(new Dimension(80, 50));
-
-        drawButton.setHorizontalTextPosition(SwingConstants.LEFT);
+        //drawButton.setHorizontalTextPosition(SwingConstants.LEFT);
         Deck myDeck = new Deck(52);
         drawButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+
                 int randomValue1;
                 randomValue1 = Integer.parseInt(String.valueOf(52*Math.random()));
                 Cards lastCard = new Cards(randomValue1);
@@ -45,8 +46,8 @@ public class GUI extends JFrame {
                 randomValue2 = Integer.parseInt(String.valueOf(52*Math.random()));
                 Cards houseCard = new Cards(randomValue2);
                 House myHouse = new House();
-                userLabel.setText("User played: " + randomValue1);
-                houseLabel.setText("House played: " + randomValue2);
+                userLabel.setText("User played: " + myCardLists.toString(myPlayed));
+                houseLabel.setText("House played: " + myCardLists.toString(myHouse));
                 ;
             }
         });
