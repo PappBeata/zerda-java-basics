@@ -105,8 +105,32 @@ class TestApple {
 
 Are the tests passing? Detail your answer! [2p] Fix the situation! [2p]
 
-#### Explain what you did, and answer the questions here:
+```java
+class Apple {
+  public int add(int a, int b) {
+    return a + b;
+  }
 
+  public int max_of_three(int a, int b, int c) {
+    return Math.max(a, b, c);
+  }
+}
+
+class TestApple {
+  public void testAdd() {
+    assertEquals(5, Apple.add(2, 3));
+  }
+
+  public void testMax() {
+    assertEquals(5, Apple.max_of_three(3, 4, 5));
+  }
+}
+```
+
+#### Explain what you did, and answer the questions here:
+Answer: Both tests are passing because they only test the special case where the code accidentally works.
+E.g. the method "add" should calculate a+b instead of returning a constant.
+In the "max-of-three" method I compared all three items instead of comparing only a and b as the original code.
 
 ## 4. Question time! (~20 mins) [6p]
 
